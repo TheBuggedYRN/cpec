@@ -1,8 +1,8 @@
-import { instabugModule } from "@instabug/cpec";
+import { instabugLibrary } from "@instabug/cpec";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return <div>{instabugModule}</div>;
+  return <pre>{JSON.stringify(instabugLibrary, null, 2)}</pre>;
 };
 
 export default Home;
