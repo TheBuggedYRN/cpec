@@ -14,6 +14,14 @@ const ModulePage: NextPage = () => {
     <div>
       <h1>{libModule.name}</h1>
       <p>{libModule.description}</p>
+      <p>
+        <b>Android: </b>
+        {libModule.native.android.name}
+      </p>
+      <p>
+        <b>iOS: </b>
+        {libModule.native.ios.name}
+      </p>
       <h2>Methods</h2>
       <ul>
         {libModule.methods.map((method) => (

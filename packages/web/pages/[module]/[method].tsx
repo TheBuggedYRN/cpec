@@ -16,6 +16,20 @@ const MethodPage: NextPage = () => {
     <div>
       <h1>{libMethod.name}</h1>
       <p>{libMethod.description}</p>
+      <p>
+        <b>Android: </b>
+        {libMethod.native.android
+          .toString()
+          .replace("function ", "")
+          .replace(" {}", "")}
+      </p>
+      <p>
+        <b>iOS: </b>
+        {libMethod.native.ios
+          .toString()
+          .replace("function ", "")
+          .replace(" {}", "")}
+      </p>
       <h2>Parameters</h2>
       <ul>
         {libMethod.params.map((param) => (
